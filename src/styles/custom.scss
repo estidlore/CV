@@ -1,0 +1,30 @@
+$primary: #dd9944;
+$info: #cc8833;
+$secondary: #222222;
+$light: #eeeeee;
+$dark: #111111;
+
+$x2: (
+  0: 1,
+  1: 2,
+  2: 4,
+  3: 8,
+  4: 16,
+  5: 32,
+);
+
+@each $k, $v in $x2 {
+  $time: 0.2s * $v;
+
+  .op-#{$k} {
+    opacity: 0.2 * $k;
+  }
+}
+
+@for $i from -2 through 2 {
+  .z-#{$i} {
+    z-index: $i * 10;
+  }
+}
+
+@import "~bootstrap/scss/bootstrap.scss";
