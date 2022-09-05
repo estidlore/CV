@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import React, { Fragment } from "react";
 
-import { Img, ProgressBar } from "components";
+import { Img, Link, ProgressBar } from "components";
 
 import type {
   IAbout,
@@ -61,35 +61,21 @@ const SidePanel: FC<ISidePanelProps> = ({
         )}
       </div>
       <div>
-        <a className={"mb1"} href={`tel:+${phone[0]}${phone[1]}`}>
-          <Img className={"mr1"} img={"link"} />
+        <Link className={"mb1"} href={`tel:+${phone[0]}${phone[1]}`}>
           {`(+${phone[0]}) ${phone[1]}`}
-        </a>
-        <a className={"mb1"} href={`mailto:${email}`}>
-          <Img className={"mr1"} img={"link"} />
+        </Link>
+        <Link className={"mb1"} href={`mailto:${email}`}>
           {email}
-        </a>
+        </Link>
         {linkedIn === undefined ? undefined : (
-          <a
-            className={"mb1"}
-            href={`https://${linkedIn}`}
-            rel={"noreferrer"}
-            target={"_blank"}
-          >
-            <Img className={"mr1"} img={"link"} />
+          <Link className={"mb1"} href={`https://${linkedIn}`}>
             {`www.${linkedIn}`}
-          </a>
+          </Link>
         )}
         {github === undefined ? undefined : (
-          <a
-            className={"mb1"}
-            href={`https://${github}`}
-            rel={"noreferrer"}
-            target={"_blank"}
-          >
-            <Img className={"mr1"} img={"link"} />
+          <Link className={"mb1"} href={`https://${github}`}>
             {`www.${github}`}
-          </a>
+          </Link>
         )}
       </div>
     </div>
