@@ -75,7 +75,6 @@ module.exports = {
     "@typescript-eslint/prefer-nullish-coalescing": "error",
     "@typescript-eslint/prefer-optional-chain": "error",
     "@typescript-eslint/prefer-readonly": "error",
-    "@typescript-eslint/prefer-readonly-parameter-types": "error",
     "@typescript-eslint/prefer-reduce-type-parameter": "error",
     "@typescript-eslint/prefer-regexp-exec": "error",
     "@typescript-eslint/promise-function-async": "error",
@@ -83,13 +82,14 @@ module.exports = {
     "@typescript-eslint/unified-signatures": "error",
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
+    "react/prop-types": "off",
     "react/react-in-jsx-scope": "error",
   },
   settings: {
     "import/resolver": {
       node: {
-        paths: ["src"],
         extensions: [".js", ".jsx", ".ts", ".tsx"],
+        paths: ["src"],
       },
     },
     react: {

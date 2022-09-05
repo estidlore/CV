@@ -1,7 +1,6 @@
-import html2canvas, { Options } from "html2canvas";
 import { jsPDF } from "jspdf";
-import { FC, useCallback } from "react";
-import React from "react";
+import type { FC } from "react";
+import React, { useCallback } from "react";
 
 import type { IMainPanelProps } from "./MainPanel";
 import { MainPanel } from "./MainPanel";
@@ -34,7 +33,7 @@ const getPdf = (id: string, width: number, height: number): IPDF | null => {
   if (cv === null) {
     return null;
   }
-  const doc = new jsPDF('p', "px", [width, height]);
+  const doc = new jsPDF("p", "px", [width, height]);
   doc.setProperties({ title: id });
   const options = {
     filename: id + ".pdf",
@@ -48,6 +47,8 @@ const genPdf = ({ cv, doc, options }: IPDF): void => {
     // Delete last blank page
     doc.deletePage(doc.getNumberOfPages());
     doc.output("dataurlnewwindow", options);
+  }).catch(() => {
+    console.log("Error creating the pdf");
   });
 };
 

@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import React, { Fragment } from "react";
+import React from "react";
 
 type TMonth = "Jan"
 | "Feb"
@@ -32,7 +32,7 @@ interface ITimeLineProps {
 }
 
 const TimeLine: FC<ITimeLineProps> = ({
-  events
+  events,
 }: Readonly<ITimeLineProps>): JSX.Element => (
   <div className={""}>
     {events.map(
@@ -56,7 +56,7 @@ const TimeLine: FC<ITimeLineProps> = ({
       )
     )}
   </div>
-)
+);
 
 export type { IDate, IEvent, ITimeLineProps };
 export { TimeLine };

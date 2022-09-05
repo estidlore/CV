@@ -70,13 +70,23 @@ const SidePanel: FC<ISidePanelProps> = ({
           {email}
         </a>
         {linkedIn === undefined ? undefined : (
-          <a className={"mb1"} href={`https://${linkedIn}`} target={"_blank"}>
+          <a
+            className={"mb1"}
+            href={`https://${linkedIn}`}
+            rel={"noreferrer"}
+            target={"_blank"}
+          >
             <Img className={"mr1"} img={"link"} />
             {`www.${linkedIn}`}
           </a>
         )}
         {github === undefined ? undefined : (
-          <a className={"mb1"} href={`https://${github}`} target={"_blank"}>
+          <a
+            className={"mb1"}
+            href={`https://${github}`}
+            rel={"noreferrer"}
+            target={"_blank"}
+          >
             <Img className={"mr1"} img={"link"} />
             {`www.${github}`}
           </a>

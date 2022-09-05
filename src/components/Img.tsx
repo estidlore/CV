@@ -1,5 +1,5 @@
 import type { CSSProperties, FC } from "react";
-import React from 'react';
+import React from "react";
 
 import { 
   faAddressBook,
@@ -29,7 +29,7 @@ interface IImgProps {
   style?: CSSProperties;
 }
 
-const fa: Record<TImg, any> = {
+const fa: Record<TImg, string> = {
   bullet: faStar,
   code: faCode,
   contact: faAddressBook,
@@ -42,7 +42,7 @@ const fa: Record<TImg, any> = {
 };
 
 const Img: FC<IImgProps> = ({
-  className,
+  className = "",
   img,
   style,
 }: Readonly<IImgProps>): JSX.Element => (
