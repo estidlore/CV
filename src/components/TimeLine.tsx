@@ -34,10 +34,10 @@ interface ITimeLineProps {
 const TimeLine: FC<ITimeLineProps> = ({
   events,
 }: Readonly<ITimeLineProps>): JSX.Element => (
-  <div className={""}>
+  <div className={"mt5"}>
     {events.map(
       ({ description, from, subtitle, title, to }: IEvent): JSX.Element => (
-        <div className={"flex mt3"} key={title ?? subtitle}>
+        <div className={"flex mt4"} key={title ?? subtitle}>
           <p className={"wp20"}>
             {`${from.year} ${from.month}${to ? ` -\n${
               to === "Present" ? to : `${to.year} ${to.month}`
@@ -45,12 +45,12 @@ const TimeLine: FC<ITimeLineProps> = ({
           </p>
           <div className={"wp80"}>
             {title === undefined ? undefined : (
-              <p className={"f4 mb1 primary5"}>{title}</p>
+              <p className={"f3 mb2 primary5"}>{title}</p>
             )}
             {subtitle === undefined ? undefined : (
-              <p className={"f3 mb1"}>{subtitle}</p>
+              <p className={"mb2"}>{subtitle}</p>
             )}
-            <p className={"f2"}>{description}</p>
+            <p>{description}</p>
           </div>
       </div>
       )

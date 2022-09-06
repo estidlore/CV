@@ -11,7 +11,7 @@ const ProgressBar: FC<IProgressBarProps> = ({
   value,
 }: Readonly<IProgressBarProps>): JSX.Element => (
   <div className={"flex rnd jc-between"}>
-    <p className={"bg-primary4 mr1 px1 rnd-l"}>
+    <p className={"bg-primary4 mr1 px2 rnd-l"}>
       {value}
     </p>
     <div className={"bg-light1 grow rnd-r"}>

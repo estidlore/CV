@@ -29,24 +29,24 @@ const SidePanel: FC<ISidePanelProps> = ({
   skills,
 }: Readonly<ISidePanelProps>): JSX.Element => (
   <div className={"bg-dark3 p6 wp30"}>
-    <div className={"flex jc-center mb3"}>
+    <div className={"flex jc-center mb4"}>
       <img className={"rnd-50 wp50"} src={photo} />
     </div>
-    <p className={"f7 mb2 primary5 ta-center"}>
+    <p className={"f4 mb2 primary5 ta-center"}>
       {name}
     </p>
-    <p className={"f3 ta-center"}>
+    <p className={"f2 ta-center"}>
       {description}
     </p>
-    <hr />
-    <p className={"ai-center f4 flex mb3 mt5 primary5"}>
-      <Img className={"mr2"} img={"user"} />
+    <hr className={"my4"} />
+    <p className={"ai-center f3 flex mb3 mt5 primary5"}>
+      <Img className={"mr3"} img={"user"} />
       {"Profile"}
     </p>
     <p className={"mb2"}>{profile}</p>
     <p className={"fs-i"}>{phrase}</p>
-    <p className={"ai-center f4 flex mb3 mt5 primary5"}>
-      <Img className={"mr2"} img={"contact"} />
+    <p className={"ai-center f3 flex mb3 mt5 primary5"}>
+      <Img className={"mr3"} img={"contact"} />
       {"Contact"}
     </p>
     <div className={"flex"}>
@@ -79,8 +79,8 @@ const SidePanel: FC<ISidePanelProps> = ({
         )}
       </div>
     </div>
-    <p className={"ai-center f4 flex mb3 mt5 primary5"}>
-      <Img className={"mr2"} img={"language"} />
+    <p className={"ai-center f3 flex mb3 mt5 primary5"}>
+      <Img className={"mr3"} img={"language"} />
       {"Languages"}
     </p>
     <div className={"flex"}>
@@ -95,8 +95,8 @@ const SidePanel: FC<ISidePanelProps> = ({
         ))}
       </div>
     </div>
-    <p className={"ai-center f4 flex mb3 mt5 primary5"}>
-      <Img className={"mr2"} img={"code"} />
+    <p className={"ai-center f3 flex mb3 mt5 primary5"}>
+      <Img className={"mr3"} img={"code"} />
       {"Dev Skills"}
     </p>
     <div className={"flex flex-wrap"}>
@@ -111,17 +111,16 @@ const SidePanel: FC<ISidePanelProps> = ({
         </Fragment>
       ))}
     </div>
-    <p className={"ai-center f4 flex mb3 mt5 primary5"}>
-      <Img className={"mr2"} img={"pawn"} />
+    <p className={"ai-center f3 flex mb3 mt5 primary5"}>
+      <Img className={"mr3"} img={"pawn"} />
       {"Hobbies"}
     </p>
     <div className={"flex flex-wrap"}>
       {hobbies.map((hobby: string): JSX.Element => (
         <p className={"wp50 mb1"} key={hobby}>
           <Img
-            className={"mr2"}
+            className={"f1 mr3"}
             img={"bullet"}
-            style={{ height: "0.75em" }}
           />
           {hobby}
         </p>

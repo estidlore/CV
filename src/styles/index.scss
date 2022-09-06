@@ -1,3 +1,17 @@
+@import "@estidlore/bonbon/scss/index.scss";
+
+$primary: getPalette(#c83, 8, "full");
+
+@for $i from 1 through 8 {
+  $color: nth($primary, $i);
+  .bg-primary#{$i} {
+    background-color: $color;
+  }
+  .primary#{$i} {
+    color: $color;
+  }
+}
+
 a {
   text-decoration: none;
 }

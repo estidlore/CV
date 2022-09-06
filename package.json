@@ -1,7 +1,7 @@
 {
   "author": "estidlore",
   "dependencies": {
-    "@estidlore/bonbon": "^1.6.0",
+    "@estidlore/bonbon": "^1.7.0",
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
@@ -38,6 +38,7 @@
   "license": "MIT",
   "main": "index.js",
   "name": "cv",
+  "repository": "https://www.github.com/estidlore/cv",
   "scripts": {
     "babel": "%INIT_CWD%/node_modules/.bin/babel.cmd ./src/index.tsx -o ./dist/bundle.js",
     "build": "NODE_ENV=production webpack",

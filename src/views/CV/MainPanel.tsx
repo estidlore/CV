@@ -16,20 +16,20 @@ const MainPanel: FC<IMainPanelProps> = ({
   experience,
 }: Readonly<IMainPanelProps>): JSX.Element => (
   <div className={"bg-dark2 p6 wp70"}>
-    <p className={"ai-center bg-primary4 f6 flex py2 px4 rnd"}>
-      <Img className={"mr2"} img={"work"} />
+    <p className={"ai-center bg-primary4 d-f f4 px4 py3 rnd"}>
+      <Img className={"mr3"} img={"work"} />
       {"Experience"}
     </p>
     <TimeLine events={experience} />
-    <p className={"ai-center bg-primary4 f6 flex mt6 py2 px4 rnd"}>
-      <Img className={"mr2"} img={"education"} />
+    <p className={"ai-center bg-primary4 d-f f4 mt6 px4 py3 rnd"}>
+      <Img className={"mr3"} img={"education"} />
       {"Education"}
     </p>
     {complementaryEducation === undefined ? undefined : (
-      <p className={"f5 mt5 primary5"}>{"Formal"}</p>
+      <p className={"f4 mt5 primary5"}>{"Formal"}</p>
     )}
     <TimeLine events={education} />
-    <p className={"f5 mt5 primary5"}>{"Complementary"}</p>
+    <p className={"f4 mt5 primary5"}>{"Complementary"}</p>
     {complementaryEducation === undefined ? undefined : (
       <TimeLine events={complementaryEducation} />
     )}

@@ -7,6 +7,8 @@ import { MainPanel } from "./MainPanel";
 import type { ISidePanelProps } from "./SidePanel";
 import { SidePanel } from "./SidePanel";
 
+import { Link } from "components";
+
 interface ICVProps extends IMainPanelProps, ISidePanelProps {
   height?: number;
   width?: number;
@@ -58,12 +60,12 @@ const CV: FC<ICVProps> = ({
   contact,
   education,
   experience,
-  height = 1400, //1620,
+  height = 1340, //1620,
   hobbies,
   languages,
   profile,
   skills,
-  width = 1080,
+  width = 1120,
 }: Readonly<ICVProps>): JSX.Element => {
   const handleSave = useCallback(() => {
     const id = "CV";
@@ -93,9 +95,12 @@ const CV: FC<ICVProps> = ({
           education={education}
           experience={experience}
         />
-        <p className={"b0 light8 l0 m3 pos-abs"}>
+        <Link
+          className={"ai-center b0 d-f light1 r0 m5 pos-abs"}
+          href={"https://www.github.com/estidlore/cv"}
+        >
           {"I built this CV with React and jsPDF"}
-        </p>
+        </Link>
       </section>
       <div className={"flex jc-center"}>
         <button

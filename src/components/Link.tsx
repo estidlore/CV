@@ -13,7 +13,7 @@ const Link: FC<TLinkProps> = ({
   href
 }: Readonly<TLinkProps>): JSX.Element => (
   <a className={className} href={href} rel={"noreferrer"} target={"_blank"}>
-    <Img className={"mr1"} img={"link"} />
+    <Img className={"mr2"} img={"link"} />
     {children}
   </a>
 );
