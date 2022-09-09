@@ -7,8 +7,6 @@ import { MainPanel } from "./MainPanel";
 import type { ISidePanelProps } from "./SidePanel";
 import { SidePanel } from "./SidePanel";
 
-import { Link } from "components";
-
 interface ICVProps extends IMainPanelProps, ISidePanelProps {
   height?: number;
   width?: number;
@@ -95,12 +93,9 @@ const CV: FC<ICVProps> = ({
           education={education}
           experience={experience}
         />
-        <Link
-          className={"ai-center b0 d-f light1 r0 m5 pos-abs"}
-          href={"https://www.github.com/estidlore/cv"}
-        >
+        <p className={"ai-center b0 d-f light6 r0 m5 pos-abs"}>
           {"I built this CV with React and jsPDF"}
-        </Link>
+        </p>
       </section>
       <div className={"flex jc-center"}>
         <button
