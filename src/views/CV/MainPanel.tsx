@@ -15,7 +15,7 @@ const MainPanel: FC<IMainPanelProps> = ({
   education,
   experience,
 }: Readonly<IMainPanelProps>): JSX.Element => (
-  <div className={"bg-dark2 p6 wp70"}>
+  <div className={"MainPanel bg-dark2 p6"}>
     <p className={"ai-center bg-primary4 d-f f4 px4 py3 rnd"}>
       <Img className={"mr3"} img={"work"} />
       {"Experience"}

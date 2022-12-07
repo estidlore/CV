@@ -28,7 +28,7 @@ const SidePanel: FC<ISidePanelProps> = ({
   profile: { profile, phrase },
   skills,
 }: Readonly<ISidePanelProps>): JSX.Element => (
-  <div className={"bg-dark3 p6 wp30"}>
+  <div className={"SidePanel bg-dark3 p6"}>
     <div className={"flex jc-center mb4"}>
       <img className={"rnd-50 wp50"} src={photo} />
     </div>
@@ -91,7 +91,7 @@ const SidePanel: FC<ISidePanelProps> = ({
       </div>
       <div>
         {languages.map(({ level, name }): JSX.Element => (
-          <p className={"mb1"} key={name}>{`(${level})`}</p>
+          <p className={"mb1"} key={name}>{level}</p>
         ))}
       </div>
     </div>

@@ -1,4 +1,11 @@
 {
+  "editor.rulers": [
+    {
+      "color": "#808080",
+      "column": 80,
+    },
+  ],
+  "editor.tabSize": 2,
   "eslint.workingDirectories": [
     "./src"
   ],

@@ -4,4 +4,12 @@ a {
   text-decoration: none;
 }
 
+.MainPanel {
+  width: 66.67%;
+}
+
+.SidePanel {
+  width: 33.33%;
+}
+
 @import "@estidlore/bonbon/scss/index.scss";
