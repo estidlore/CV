@@ -1,15 +1,12 @@
 import type { FC } from "react";
 import React from "react";
 
-interface IProgressBarProps {
-  max?: number;
-  value: number;
-}
+import type { IProgressBarProps } from "./types";
 
 const ProgressBar: FC<IProgressBarProps> = ({
   max = 100,
   value,
-}: Readonly<IProgressBarProps>): JSX.Element => (
+}: IProgressBarProps): JSX.Element => (
   <div className={"flex rnd jc-between"}>
     <p className={"bg-primary4 mr1 px2 rnd-l"}>
       {value}
@@ -26,4 +23,3 @@ const ProgressBar: FC<IProgressBarProps> = ({
 );
 
 export { ProgressBar };
-

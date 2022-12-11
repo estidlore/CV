@@ -1,9 +1,9 @@
 import type { FC } from "react";
 import React, { Fragment } from "react";
 
-import { ProgressBar } from "components";
 import { Image } from "components/Image";
 import { Link } from "components/Link";
+import { ProgressBar } from "components/ProgressBar";
 import type {
   IAbout,
   IBasicInfo,
