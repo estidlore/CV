@@ -26,7 +26,8 @@ module.exports = {
   plugins: [
     "@typescript-eslint",
     "prettier",
-    "react"
+    "react",
+    "simple-import-sort"
   ],
   root: true,
   rules: {
@@ -45,7 +46,17 @@ module.exports = {
     "@typescript-eslint/explicit-member-accessibility": "error",
     "@typescript-eslint/explicit-module-boundary-types": "error",
     "@typescript-eslint/member-delimiter-style": "error",
-    "@typescript-eslint/member-ordering": "error",
+    "@typescript-eslint/member-ordering": [
+      "error",
+      {
+        "default": [
+          "signature",
+          "field",
+          "constructor",
+          "method",
+        ],
+      },
+    ],
     "@typescript-eslint/method-signature-style": ["error", "property"],
     "@typescript-eslint/no-base-to-string": "error",
     "@typescript-eslint/no-duplicate-enum-values": "error",
@@ -80,10 +91,118 @@ module.exports = {
     "@typescript-eslint/promise-function-async": "error",
     "@typescript-eslint/type-annotation-spacing": "error",
     "@typescript-eslint/unified-signatures": "error",
+    "comma-spacing": [
+      "error",
+      {
+        "after": true,
+        "before": false,
+      },
+    ],
+    "indent": ["error", 2],
+    "max-len": [
+      "error",
+      {
+        "code": 80,
+      },
+    ],
+    "max-lines": [
+      "error",
+      {
+        "max": 200,
+        "skipBlankLines": false,
+        "skipComments": false,
+      },
+    ],
+    "no-restricted-syntax": [
+      "error",
+      "ExportDefaultDeclaration",
+    ],
+    "object-curly-spacing": [
+      "error",
+      "always",
+      {
+        "arraysInObjects": true,
+        "objectsInObjects": true,
+      },
+    ],
+    "react/jsx-curly-brace-presence": [
+      "error",
+      {
+        children: "always",
+        props: "always"
+      }
+    ],
+    "react/jsx-indent": [
+      "error",
+      2,
+      {
+        "checkAttributes": true,
+        "indentLogicalExpressions": true,
+      },
+    ],
+    "react/jsx-indent-props": ["error", 2],
+    "react/jsx-max-depth": [
+      "error", {
+        "max": 5,
+      },
+    ],
+    "react/jsx-no-literals": "error",
+    "react/jsx-one-expression-per-line": [
+      "error",
+      {
+        "allow": "single-child",
+      },
+    ],
+    "react/jsx-sort-props": "error",
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
-    "react/prop-types": "off",
+    "react/no-children-prop": "error",
+    "react/no-multi-comp": [
+      "error",
+      {
+        "ignoreStateless": false,
+      },
+    ],
+    "react/jsx-no-useless-fragment": [
+      "error",
+      {
+        "allowExpressions": true,
+      },
+    ],
     "react/react-in-jsx-scope": "error",
+    "simple-import-sort/imports": [
+      "error",
+      {
+        "groups": [
+          // Side effect imports
+          ["^\\u0000"],
+          // Node.js builtins
+          ["^node:"],
+          // External packages
+          ["^@?\\w"],
+          // Internal packages
+          ["^(assets|components|navigation|styles|types|utils|views)"],
+          // Relative imports
+          ["^\\."],
+        ],
+      },
+    ],
+    "sort-imports": [
+      "error",
+      {
+        "ignoreCase": true,
+        "ignoreDeclarationSort": true,
+        "ignoreMemberSort": false,
+        "memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
+      },
+    ],
+    "sort-keys": ["error", "asc"],
+    "sort-vars": [
+      "error",
+      {
+        "ignoreCase": true,
+      },
+    ],
   },
   settings: {
     "import/resolver": {

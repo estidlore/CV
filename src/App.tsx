@@ -1,6 +1,3 @@
-import type { FC } from "react";
-import React from "react";
-
 import {
   basicInfo,
   complementaryEducation,
@@ -11,11 +8,14 @@ import {
   languages,
   profile,
   skills,
-} from "data/cvInfo";
+} from "data";
+import type { FC } from "react";
+import React from "react";
+
 import { CV } from "views/CV";
 
 const App: FC = (): JSX.Element => (
-  <div className={"bg-dark1 flex jc-center"}>
+  <div className={"bg-dark1 ff-arial flex jc-center"}>
     <CV
       basicInfo={basicInfo}
       complementaryEducation={complementaryEducation}

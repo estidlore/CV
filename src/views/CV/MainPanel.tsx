@@ -1,8 +1,8 @@
 import type { FC } from "react";
 import React from "react";
 
-import type { IEvent } from "components/TimeLine";
 import { Img, TimeLine } from "components";
+import type { IEvent } from "components/TimeLine";
 
 interface IMainPanelProps {
   complementaryEducation?: IEvent[];

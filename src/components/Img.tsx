@@ -1,6 +1,3 @@
-import type { CSSProperties, FC } from "react";
-import React from "react";
-
 import { 
   faAddressBook,
   faBriefcase,
@@ -12,6 +9,8 @@ import {
   faStar,
   faUser,
 } from "imgs/fa";
+import type { CSSProperties, FC } from "react";
+import React from "react";
 
 type TImg = "bullet" |
   "code" |

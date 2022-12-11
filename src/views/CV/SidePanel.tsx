@@ -2,7 +2,6 @@ import type { FC } from "react";
 import React, { Fragment } from "react";
 
 import { Img, Link, ProgressBar } from "components";
-
 import type {
   IAbout,
   IBasicInfo,
@@ -106,7 +105,7 @@ const SidePanel: FC<ISidePanelProps> = ({
             {`${name}:`}
           </p>
           <div className={"mb1 wp60"}>
-            <ProgressBar value={level} max={10} />
+            <ProgressBar max={10} value={level} />
           </div>
         </Fragment>
       ))}

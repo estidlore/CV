@@ -99,8 +99,8 @@ const CV: FC<ICVProps> = ({
       </section>
       <div className={"flex jc-center"}>
         <button
-          onClick={(handleSave)}
           className={"bg-primary5 light2 mt3 px3 py2 rnd"}
+          onClick={handleSave}
         >
           {"Save"}
         </button>

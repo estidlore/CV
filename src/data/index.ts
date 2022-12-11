@@ -1,10 +1,11 @@
-import type { IEvent } from "components/TimeLine";
 import { photo } from "imgs";
+
+import type { IEvent } from "components/TimeLine";
 import type {
+  IAbout,
   IBasicInfo,
   IContact,
   ILanguage,
-  IAbout,
   ISkill
 } from "views/CV/types";
 
@@ -159,12 +160,12 @@ const languages: ILanguage[] = [
 ];
 
 const profile: IAbout = {
+  phrase: "Today better than yesterday",
   profile: "Software developer with three years of experience. " +
   "Skilled in UI/UX development, algorithms and problem solving. " +
   "Constantly working on growing and acquiring multidisciplinary skills. " +
   "Known by a fast learning, creativity and " +
   "pursuit excellence in all he is and all he does.",
-  phrase: "Today better than yesterday",
 };
 
 const skills: ISkill[] = [

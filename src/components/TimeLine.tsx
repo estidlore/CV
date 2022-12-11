@@ -8,7 +8,7 @@ type TMonth = "Jan"
 | "May"
 | "Jun"
 | "Jul"
-| "Ago"
+| "Aug"
 | "Sep"
 | "Oct"
 | "Nov"
@@ -33,7 +33,7 @@ interface ITimeLineProps {
 
 const TimeLine: FC<ITimeLineProps> = ({
   events,
-}: Readonly<ITimeLineProps>): JSX.Element => (
+}: ITimeLineProps): JSX.Element => (
   <div className={"mt5"}>
     {events.map(
       ({ description, from, subtitle, title, to }: IEvent): JSX.Element => (
@@ -52,7 +52,7 @@ const TimeLine: FC<ITimeLineProps> = ({
             )}
             <p>{description}</p>
           </div>
-      </div>
+        </div>
       )
     )}
   </div>
