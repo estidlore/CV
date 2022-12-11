@@ -16,6 +16,22 @@ const basicInfo: IBasicInfo = {
 
 const complementaryEducation: IEvent[] = [
   {
+    description: "Udemy",
+    from: {
+      month: "Nov",
+      year: 2022,
+    },
+    subtitle: "Databases With Python",
+  },
+  {
+    description: "Cisco",
+    from: {
+      month: "Oct",
+      year: 2022,
+    },
+    subtitle: "Introduction To IoT",
+  },
+  {
     description: "Coursera",
     from: {
       month: "Jan",
@@ -38,14 +54,6 @@ const complementaryEducation: IEvent[] = [
       year: 2021,
     },
     subtitle: "React Js",
-  },
-  {
-    description: "ED Team",
-    from: {
-      month: "Dec",
-      year: 2021,
-    },
-    subtitle: "Desarrollo Personal",
   },
   {
     description: "Coursera",
@@ -90,7 +98,10 @@ const experience: IEvent[] = [
     },
     subtitle: "Fluid Attacks",
     title: "Security Developer",
-    to: "Present",
+    to: {
+      month: "Sep",
+      year: 2022,
+    },
   },
   {
     description: "Designer and developer of web apps for Dirección Central " +
@@ -142,7 +153,7 @@ const languages: ILanguage[] = [
     name: "English",
   },
   {
-    level: "Starting",
+    level: "A1",
     name: "French",
   },
 ];
@@ -162,8 +173,8 @@ const skills: ISkill[] = [
     name: "C#",
   },
   {
-    level: 8,
-    name: "CSS/SCSS",
+    level: 9,
+    name: "CSS & SCSS",
   },
   {
     level: 6,
@@ -171,7 +182,7 @@ const skills: ISkill[] = [
   },
   {
     level: 8,
-    name: "HTML/XML",
+    name: "HTML",
   },
   {
     level: 8,
