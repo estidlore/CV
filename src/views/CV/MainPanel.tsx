@@ -1,7 +1,8 @@
 import type { FC } from "react";
 import React from "react";
 
-import { Img, TimeLine } from "components";
+import { TimeLine } from "components";
+import { Image } from "components/Image";
 import type { IEvent } from "components/TimeLine";
 
 interface IMainPanelProps {
@@ -17,12 +18,12 @@ const MainPanel: FC<IMainPanelProps> = ({
 }: Readonly<IMainPanelProps>): JSX.Element => (
   <div className={"MainPanel bg-dark2 p6"}>
     <p className={"ai-center bg-primary4 d-f f4 px4 py3 rnd"}>
-      <Img className={"mr3"} img={"work"} />
+      <Image className={"mr3"} name={"briefcase"} />
       {"Experience"}
     </p>
     <TimeLine events={experience} />
     <p className={"ai-center bg-primary4 d-f f4 mt6 px4 py3 rnd"}>
-      <Img className={"mr3"} img={"education"} />
+      <Image className={"mr3"} name={"graduationCap"} />
       {"Education"}
     </p>
     {complementaryEducation === undefined ? undefined : (

@@ -20,4 +20,7 @@ const faImgs = {
   user,
 };
 
+type FaImage = keyof typeof faImgs;
+
+export type { FaImage };
 export { faImgs };

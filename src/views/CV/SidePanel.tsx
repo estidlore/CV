@@ -1,7 +1,8 @@
 import type { FC } from "react";
 import React, { Fragment } from "react";
 
-import { Img, Link, ProgressBar } from "components";
+import { Link, ProgressBar } from "components";
+import { Image } from "components/Image";
 import type {
   IAbout,
   IBasicInfo,
@@ -39,13 +40,13 @@ const SidePanel: FC<ISidePanelProps> = ({
     </p>
     <hr className={"my4"} />
     <p className={"ai-center f3 flex mb3 mt5 primary5"}>
-      <Img className={"mr3"} img={"user"} />
+      <Image className={"mr3"} name={"user"} />
       {"Profile"}
     </p>
     <p className={"mb2"}>{profile}</p>
     <p className={"fs-i"}>{phrase}</p>
     <p className={"ai-center f3 flex mb3 mt5 primary5"}>
-      <Img className={"mr3"} img={"contact"} />
+      <Image className={"mr3"} name={"addressBook"} />
       {"Contact"}
     </p>
     <div className={"flex"}>
@@ -79,7 +80,7 @@ const SidePanel: FC<ISidePanelProps> = ({
       </div>
     </div>
     <p className={"ai-center f3 flex mb3 mt5 primary5"}>
-      <Img className={"mr3"} img={"language"} />
+      <Image className={"mr3"} name={"language"} />
       {"Languages"}
     </p>
     <div className={"flex"}>
@@ -95,7 +96,7 @@ const SidePanel: FC<ISidePanelProps> = ({
       </div>
     </div>
     <p className={"ai-center f3 flex mb3 mt5 primary5"}>
-      <Img className={"mr3"} img={"code"} />
+      <Image className={"mr3"} name={"code"} />
       {"Dev Skills"}
     </p>
     <div className={"flex flex-wrap"}>
@@ -111,16 +112,13 @@ const SidePanel: FC<ISidePanelProps> = ({
       ))}
     </div>
     <p className={"ai-center f3 flex mb3 mt5 primary5"}>
-      <Img className={"mr3"} img={"pawn"} />
+      <Image className={"mr3"} name={"chessPawn"} />
       {"Hobbies"}
     </p>
     <div className={"flex flex-wrap"}>
       {hobbies.map((hobby: string): JSX.Element => (
         <p className={"wp50 mb1"} key={hobby}>
-          <Img
-            className={"f1 mr3"}
-            img={"bullet"}
-          />
+          <Image className={"f1 mr3"} name={"star"} />
           {hobby}
         </p>
       ))}
