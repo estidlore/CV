@@ -1,16 +1,7 @@
-import { 
-  faAddressBook,
-  faBriefcase,
-  faChessPawn,
-  faCode,
-  faExternalLink,
-  faGraduationCap,
-  faLanguage,
-  faStar,
-  faUser,
-} from "imgs/fa";
 import type { CSSProperties, FC } from "react";
 import React from "react";
+
+import { faImgs } from "assets/imgs";
 
 type TImg = "bullet" |
   "code" |
@@ -29,15 +20,15 @@ interface IImgProps {
 }
 
 const fa: Record<TImg, string> = {
-  bullet: faStar,
-  code: faCode,
-  contact: faAddressBook,
-  education: faGraduationCap,
-  language: faLanguage,
-  link: faExternalLink,
-  pawn: faChessPawn,
-  user: faUser,
-  work: faBriefcase,
+  bullet: faImgs.star,
+  code: faImgs.code,
+  contact: faImgs.addressBook,
+  education: faImgs.graduationCap,
+  language: faImgs.language,
+  link: faImgs.externalLink,
+  pawn: faImgs.chessPawn,
+  user: faImgs.user,
+  work: faImgs.briefcase,
 };
 
 const Img: FC<IImgProps> = ({

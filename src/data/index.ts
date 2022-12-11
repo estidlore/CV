@@ -1,5 +1,4 @@
-import { photo } from "imgs";
-
+import { imgs } from "assets/imgs";
 import type { IEvent } from "components/TimeLine";
 import type {
   IAbout,
@@ -12,7 +11,7 @@ import type {
 const basicInfo: IBasicInfo = {
   description: "Full-Stack Web Developer",
   name: "Estid Felipe\nLozano Reyes",
-  photo,
+  photo: imgs.photo,
 };
 
 const complementaryEducation: IEvent[] = [
