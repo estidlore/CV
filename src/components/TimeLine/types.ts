@@ -1,31 +1,14 @@
-type TMonth = "Jan"
-| "Feb"
-| "Mar"
-| "Apr"
-| "May"
-| "Jun"
-| "Jul"
-| "Aug"
-| "Sep"
-| "Oct"
-| "Nov"
-| "Dec";
-
-interface IDate {
-  month: TMonth;
-  year: number;
-}
+import type { IDate, IDateRange } from "types/time";
 
 interface IEvent {
+  date: IDate | IDateRange;
   description: string;
-  from: IDate;
   subtitle?: string;
   title?: string;
-  to?: IDate | "Present";
 }
 
 interface ITimeLineProps {
   events: IEvent[];
 }
 
-export type { IDate, IEvent, ITimeLineProps, TMonth };
+export type { IEvent, ITimeLineProps };

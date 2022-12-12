@@ -1,6 +1,8 @@
 import type { FC } from "react";
 import React from "react";
 
+import { formatDate, formatDateRange } from "utils/time";
+
 import type { IEvent, ITimeLineProps } from "./types";
 
 const TimeLine: FC<ITimeLineProps> = ({
@@ -8,12 +10,10 @@ const TimeLine: FC<ITimeLineProps> = ({
 }: ITimeLineProps): JSX.Element => (
   <div className={"mt5"}>
     {events.map(
-      ({ description, from, subtitle, title, to }: IEvent): JSX.Element => (
+      ({ date, description, subtitle, title }: IEvent): JSX.Element => (
         <div className={"flex mt4"} key={title ?? subtitle}>
           <p className={"wp20"}>
-            {`${from.year} ${from.month}${to ? ` -\n${
-              to === "Present" ? to : `${to.year} ${to.month}`
-            }` : ""}`}
+            {"month" in date ? formatDate(date) : formatDateRange(date)}
           </p>
           <div className={"wp80"}>
             {title === undefined ? undefined : (

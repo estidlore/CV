@@ -16,51 +16,51 @@ const basicInfo: IBasicInfo = {
 
 const complementaryEducation: IEvent[] = [
   {
-    description: "Udemy",
-    from: {
+    date: {
       month: "Nov",
       year: 2022,
     },
+    description: "Udemy",
     subtitle: "Databases With Python",
   },
   {
-    description: "Cisco",
-    from: {
+    date: {
       month: "Oct",
       year: 2022,
     },
+    description: "Cisco",
     subtitle: "Introduction To IoT",
   },
   {
-    description: "Coursera",
-    from: {
+    date: {
       month: "Jan",
       year: 2022,
     },
+    description: "Coursera",
     subtitle: "TypeScript Variables And Data Types",
   },
   {
-    description: "Coursera",
-    from: {
+    date: {
       month: "Jan",
       year: 2022,
     },
+    description: "Coursera",
     subtitle: "Introduction To User Experience Design",
   },
   {
-    description: "ED Team",
-    from: {
+    date: {
       month: "Dec",
       year: 2021,
     },
+    description: "ED Team",
     subtitle: "React Js",
   },
   {
-    description: "Coursera",
-    from: {
+    date: {
       month: "Oct",
       year: 2021,
     },
+    description: "Coursera",
     subtitle: "Learning How To Learn",
   },
 ];
@@ -74,63 +74,71 @@ const contact: IContact = {
 
 const education: IEvent[] = [
   {
+    date: {
+      from: {
+        month: "Jan",
+        year: 2018,
+      },
+      to: "Now",
+    },
     description: "I have been member of several groups of interest: " +
     "Robotics, Web Development, Videogames, Human Centered Design, " +
     "Automated Software Configuration, Growth (Psychology).",
-    from: {
-      month: "Jan",
-      year: 2018,
-    },
     subtitle: "Informatics Engineering",
     title: "Universidad de La Sabana",
-    to: "Present",
   },
 ];
 
 const experience: IEvent[] = [
   {
+    date: {
+      from: {
+        month: "Apr",
+        year: 2022,
+      },
+      to: {
+        month: "Sep",
+        year: 2022,
+      },
+    },
     description: "UX team's developer for ARM platform. Main responsible of " +
       "the platform's storybook development and new designs implementation. " +
       "Furthermore, designed and contributed to design some features.",
-    from: {
-      month: "Apr",
-      year: 2022,
-    },
     subtitle: "Fluid Attacks",
     title: "Security Developer",
-    to: {
-      month: "Sep",
-      year: 2022,
-    },
   },
   {
+    date: {
+      from: {
+        month: "Feb",
+        year: 2021,
+      },
+      to: {
+        month: "Jan",
+        year: 2022,
+      },
+    },
     description: "Designer and developer of web apps for Dirección Central " +
       "De Estudiantes department, and maintain and improve the exitent ones.",
-    from: {
-      month: "Feb",
-      year: 2021,
-    },
     subtitle: "Universidad de La Sabana",
     title: "Web developer",
-    to: {
-      month: "Jan",
-      year: 2022,
-    },
   },
   {
+    date: {
+      from: {
+        month: "Jan",
+        year: 2021,
+      },
+      to: {
+        month: "Jan",
+        year: 2022,
+      },
+    },
     description: "Voluntary as leader, speaker and mentor in activities, " +
       "competitions, groups and events related to IEEE Computer Society and " +
       "informatics engineering.",
-    from: {
-      month: "Jan",
-      year: 2021,
-    },
     subtitle: "Universidad de La Sabana",
     title: "IEEE Computer Society Vicepresident",
-    to: {
-      month: "Jan",
-      year: 2022,
-    },
   },
 ];
 
