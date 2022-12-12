@@ -2,12 +2,12 @@ import { jsPDF } from "jspdf";
 import type { FC } from "react";
 import React, { useCallback } from "react";
 
-import type { IMainPanelProps } from "./MainPanel";
-import { MainPanel } from "./MainPanel";
+import { MainPanel } from "views/MainPanel";
+
 import type { ISidePanelProps } from "./SidePanel";
 import { SidePanel } from "./SidePanel";
 
-interface ICVProps extends IMainPanelProps, ISidePanelProps {
+interface ICVProps extends ISidePanelProps {
   height?: number;
   width?: number;
 }
@@ -54,10 +54,7 @@ const genPdf = ({ cv, doc, options }: IPDF): void => {
 
 const CV: FC<ICVProps> = ({
   basicInfo,
-  complementaryEducation,
   contact,
-  education,
-  experience,
   height = 1340, //1620,
   hobbies,
   languages,
@@ -88,11 +85,7 @@ const CV: FC<ICVProps> = ({
           profile={profile}
           skills={skills}
         />
-        <MainPanel
-          complementaryEducation={complementaryEducation}
-          education={education}
-          experience={experience}
-        />
+        <MainPanel />
         <p className={"ai-center b0 d-f light6 r0 m5 pos-abs"}>
           {"I built this CV with React and jsPDF"}
         </p>
