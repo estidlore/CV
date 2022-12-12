@@ -1,5 +1,5 @@
 import { imgs } from "assets/imgs";
-import type { IEvent } from "components/TimeLine";
+import type { IEvent } from "components/TimeLine/types";
 import type {
   IAbout,
   IBasicInfo,

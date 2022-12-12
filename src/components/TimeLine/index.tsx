@@ -1,35 +1,7 @@
 import type { FC } from "react";
 import React from "react";
 
-type TMonth = "Jan"
-| "Feb"
-| "Mar"
-| "Apr"
-| "May"
-| "Jun"
-| "Jul"
-| "Aug"
-| "Sep"
-| "Oct"
-| "Nov"
-| "Dec";
-
-interface IDate {
-  month: TMonth;
-  year: number;
-}
-
-interface IEvent {
-  description: string;
-  from: IDate;
-  subtitle?: string;
-  title?: string;
-  to?: IDate | "Present";
-}
-
-interface ITimeLineProps {
-  events: IEvent[];
-}
+import type { IEvent, ITimeLineProps } from "./types";
 
 const TimeLine: FC<ITimeLineProps> = ({
   events,
@@ -58,5 +30,4 @@ const TimeLine: FC<ITimeLineProps> = ({
   </div>
 );
 
-export type { IDate, IEvent, ITimeLineProps };
 export { TimeLine };
