@@ -1,5 +1,4 @@
 import { imgs } from "assets/imgs";
-import type { IEvent } from "types/background";
 import type {
   IAbout,
   IBasicInfo,
@@ -14,133 +13,12 @@ const basicInfo: IBasicInfo = {
   photo: imgs.photo,
 };
 
-const complementaryEducation: IEvent[] = [
-  {
-    date: {
-      month: "Nov",
-      year: 2022,
-    },
-    description: "Udemy",
-    subtitle: "Databases With Python",
-  },
-  {
-    date: {
-      month: "Oct",
-      year: 2022,
-    },
-    description: "Cisco",
-    subtitle: "Introduction To IoT",
-  },
-  {
-    date: {
-      month: "Jan",
-      year: 2022,
-    },
-    description: "Coursera",
-    subtitle: "TypeScript Variables And Data Types",
-  },
-  {
-    date: {
-      month: "Jan",
-      year: 2022,
-    },
-    description: "Coursera",
-    subtitle: "Introduction To User Experience Design",
-  },
-  {
-    date: {
-      month: "Dec",
-      year: 2021,
-    },
-    description: "ED Team",
-    subtitle: "React Js",
-  },
-  {
-    date: {
-      month: "Oct",
-      year: 2021,
-    },
-    description: "Coursera",
-    subtitle: "Learning How To Learn",
-  },
-];
-
 const contact: IContact = {
   email: "estidlore@outlook.com",
   github: "github.com/estidlore",
   linkedIn: "linkedin.com/in/estidlore",
   phone: [57, 3194998015],
 };
-
-const education: IEvent[] = [
-  {
-    date: {
-      from: {
-        month: "Jan",
-        year: 2018,
-      },
-      to: "Now",
-    },
-    description: "I have been member of several groups of interest: " +
-    "Robotics, Web Development, Videogames, Human Centered Design, " +
-    "Automated Software Configuration, Growth (Psychology).",
-    subtitle: "Informatics Engineering",
-    title: "Universidad de La Sabana",
-  },
-];
-
-const experience: IEvent[] = [
-  {
-    date: {
-      from: {
-        month: "Apr",
-        year: 2022,
-      },
-      to: {
-        month: "Sep",
-        year: 2022,
-      },
-    },
-    description: "UX team's developer for ARM platform. Main responsible of " +
-      "the platform's storybook development and new designs implementation. " +
-      "Furthermore, designed and contributed to design some features.",
-    subtitle: "Fluid Attacks",
-    title: "Security Developer",
-  },
-  {
-    date: {
-      from: {
-        month: "Feb",
-        year: 2021,
-      },
-      to: {
-        month: "Jan",
-        year: 2022,
-      },
-    },
-    description: "Designer and developer of web apps for Dirección Central " +
-      "De Estudiantes department, and maintain and improve the exitent ones.",
-    subtitle: "Universidad de La Sabana",
-    title: "Web developer",
-  },
-  {
-    date: {
-      from: {
-        month: "Jan",
-        year: 2021,
-      },
-      to: {
-        month: "Jan",
-        year: 2022,
-      },
-    },
-    description: "Voluntary as leader, speaker and mentor in activities, " +
-      "competitions, groups and events related to IEEE Computer Society and " +
-      "informatics engineering.",
-    subtitle: "Universidad de La Sabana",
-    title: "IEEE Computer Society Vicepresident",
-  },
-];
 
 const hobbies: string[] = [
   "Learning",
@@ -212,14 +90,4 @@ const skills: ISkill[] = [
 
 skills.sort((a, b) => b.level - a.level);
 
-export {
-  basicInfo,
-  complementaryEducation,
-  contact,
-  education,
-  experience,
-  hobbies,
-  languages,
-  profile,
-  skills,
-};
+export { basicInfo, contact, hobbies, languages, profile, skills };
