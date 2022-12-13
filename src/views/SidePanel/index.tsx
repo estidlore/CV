@@ -4,48 +4,34 @@ import React, { Fragment } from "react";
 import { Image } from "components/Image";
 import { Link } from "components/Link";
 import { ProgressBar } from "components/ProgressBar";
-import type {
-  IAbout,
-  IBasicInfo,
-  IContact,
-  ILanguage,
-  ISkill
-} from "views/SidePanel/types";
 
-interface ISidePanelProps {
-  basicInfo: IBasicInfo;
-  contact: IContact;
-  hobbies: string[];
-  languages: ILanguage[];
-  profile: IAbout;
-  skills: ISkill[];
-}
-
-const SidePanel: FC<ISidePanelProps> = ({
-  basicInfo: { description, name, photo },
-  contact: { email, phone, github, linkedIn },
+import {
+  basicInfo,
+  contact,
   hobbies,
   languages,
-  profile: { profile, phrase },
+  profile,
   skills,
-}: Readonly<ISidePanelProps>): JSX.Element => (
+} from "./data";
+
+const SidePanel: FC = (): JSX.Element => (
   <div className={"SidePanel bg-dark3 p6"}>
     <div className={"flex jc-center mb4"}>
-      <img className={"rnd-50 wp50"} src={photo} />
+      <img className={"rnd-50 wp50"} src={basicInfo.photo} />
     </div>
     <p className={"f4 mb2 primary5 ta-center"}>
-      {name}
+      {basicInfo.name}
     </p>
     <p className={"f2 ta-center"}>
-      {description}
+      {basicInfo.description}
     </p>
     <hr className={"my4"} />
     <p className={"ai-center f3 flex mb3 mt5 primary5"}>
       <Image className={"mr3"} name={"user"} />
       {"Profile"}
     </p>
-    <p className={"mb2"}>{profile}</p>
-    <p className={"fs-i"}>{phrase}</p>
+    <p className={"mb2"}>{profile.profile}</p>
+    <p className={"fs-i"}>{profile.phrase}</p>
     <p className={"ai-center f3 flex mb3 mt5 primary5"}>
       <Image className={"mr3"} name={"addressBook"} />
       {"Contact"}
@@ -58,17 +44,20 @@ const SidePanel: FC<ISidePanelProps> = ({
         <p className={"mb1"}>{"Github:"}</p>
       </div>
       <div>
-        <Link className={"mb1"} href={`tel:+${phone[0]}${phone[1]}`}>
-          {`(+${phone[0]}) ${phone[1]}`}
+        <Link
+          className={"mb1"}
+          href={`tel:+${contact.phone[0]}${contact.phone[1]}`}
+        >
+          {`(+${contact.phone[0]}) ${contact.phone[1]}`}
         </Link>
-        <Link className={"mb1"} href={`mailto:${email}`}>
-          {email}
+        <Link className={"mb1"} href={`mailto:${contact.email}`}>
+          {contact.email}
         </Link>
-        <Link className={"mb1"} href={`https://${linkedIn}`}>
-          {`www.${linkedIn}`}
+        <Link className={"mb1"} href={`https://${contact.linkedIn}`}>
+          {`www.${contact.linkedIn}`}
         </Link>
-        <Link className={"mb1"} href={`https://${github}`}>
-          {`www.${github}`}
+        <Link className={"mb1"} href={`https://${contact.github}`}>
+          {`www.${contact.github}`}
         </Link>
       </div>
     </div>
@@ -109,7 +98,7 @@ const SidePanel: FC<ISidePanelProps> = ({
       {"Hobbies"}
     </p>
     <div className={"flex flex-wrap"}>
-      {hobbies.map((hobby: string): JSX.Element => (
+      {hobbies.map((hobby): JSX.Element => (
         <p className={"wp50 mb1"} key={hobby}>
           <Image className={"f1 mr3"} name={"star"} />
           {hobby}
@@ -119,5 +108,4 @@ const SidePanel: FC<ISidePanelProps> = ({
   </div>
 );
 
-export type { ISidePanelProps };
 export { SidePanel };

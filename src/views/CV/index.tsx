@@ -4,10 +4,9 @@ import React, { useCallback } from "react";
 
 import { MainPanel } from "views/MainPanel";
 
-import type { ISidePanelProps } from "./SidePanel";
-import { SidePanel } from "./SidePanel";
+import { SidePanel } from "../SidePanel";
 
-interface ICVProps extends ISidePanelProps {
+interface ICVProps {
   height?: number;
   width?: number;
 }
@@ -53,13 +52,7 @@ const genPdf = ({ cv, doc, options }: IPDF): void => {
 };
 
 const CV: FC<ICVProps> = ({
-  basicInfo,
-  contact,
   height = 1340, //1620,
-  hobbies,
-  languages,
-  profile,
-  skills,
   width = 1120,
 }: Readonly<ICVProps>): JSX.Element => {
   const handleSave = useCallback(() => {
@@ -77,14 +70,7 @@ const CV: FC<ICVProps> = ({
         id={"CV"}
         style={{ height: `${height}px`, width: `${width}px` }}
       >
-        <SidePanel
-          basicInfo={basicInfo}
-          contact={contact}
-          hobbies={hobbies}
-          languages={languages}
-          profile={profile}
-          skills={skills}
-        />
+        <SidePanel />
         <MainPanel />
         <p className={"ai-center b0 d-f light6 r0 m5 pos-abs"}>
           {"I built this CV with React and jsPDF"}
