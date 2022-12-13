@@ -49,7 +49,7 @@ module.exports = {
     "@typescript-eslint/member-ordering": [
       "error",
       {
-        "default": [
+        default: [
           "signature",
           "field",
           "constructor",
@@ -94,23 +94,23 @@ module.exports = {
     "comma-spacing": [
       "error",
       {
-        "after": true,
-        "before": false,
+        after: true,
+        before: false,
       },
     ],
     "indent": ["error", 2],
     "max-len": [
       "error",
       {
-        "code": 80,
+        code: 80,
       },
     ],
     "max-lines": [
       "error",
       {
-        "max": 200,
-        "skipBlankLines": false,
-        "skipComments": false,
+        max: 200,
+        skipBlankLines: false,
+        skipComments: false,
       },
     ],
     "no-restricted-syntax": [
@@ -121,8 +121,8 @@ module.exports = {
       "error",
       "always",
       {
-        "arraysInObjects": true,
-        "objectsInObjects": true,
+        arraysInObjects: true,
+        objectsInObjects: true,
       },
     ],
     "react/jsx-curly-brace-presence": [
@@ -136,21 +136,21 @@ module.exports = {
       "error",
       2,
       {
-        "checkAttributes": true,
-        "indentLogicalExpressions": true,
+        checkAttributes: true,
+        indentLogicalExpressions: true,
       },
     ],
     "react/jsx-indent-props": ["error", 2],
     "react/jsx-max-depth": [
       "error", {
-        "max": 5,
+        max: 5,
       },
     ],
     "react/jsx-no-literals": "error",
     "react/jsx-one-expression-per-line": [
       "error",
       {
-        "allow": "single-child",
+        allow: "single-child",
       },
     ],
     "react/jsx-sort-props": "error",
@@ -160,20 +160,20 @@ module.exports = {
     "react/no-multi-comp": [
       "error",
       {
-        "ignoreStateless": false,
+        ignoreStateless: false,
       },
     ],
     "react/jsx-no-useless-fragment": [
       "error",
       {
-        "allowExpressions": true,
+        allowExpressions: true,
       },
     ],
     "react/react-in-jsx-scope": "error",
     "simple-import-sort/imports": [
       "error",
       {
-        "groups": [
+        groups: [
           // Side effect imports
           ["^\\u0000"],
           // Node.js builtins
@@ -190,17 +190,17 @@ module.exports = {
     "sort-imports": [
       "error",
       {
-        "ignoreCase": true,
-        "ignoreDeclarationSort": true,
-        "ignoreMemberSort": false,
-        "memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
+        ignoreCase: true,
+        ignoreDeclarationSort: true,
+        ignoreMemberSort: false,
+        memberSyntaxSortOrder: ["none", "all", "multiple", "single"],
       },
     ],
     "sort-keys": ["error", "asc"],
     "sort-vars": [
       "error",
       {
-        "ignoreCase": true,
+        ignoreCase: true,
       },
     ],
   },

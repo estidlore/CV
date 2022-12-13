@@ -1,45 +1,15 @@
-import { jsPDF } from "jspdf";
 import type { FC } from "react";
 import React, { useCallback } from "react";
 
-import { getOptions } from "utils/pdf";
+import { generatePdf, getOptions } from "utils/pdf";
 import { MainPanel } from "views/MainPanel";
 import { SidePanel } from "views/SidePanel";
 
-interface IPDF {
-  doc: jsPDF;
-  el: HTMLElement;
-}
-
 const options = getOptions("CV", 1120, 1500);
-
-const getPdf = (): IPDF | null => {
-  const el = document.getElementById(options.name);
-  if (el === null) {
-    return null;
-  }
-  const doc = new jsPDF("p", "px", [options.width, options.height]);
-  doc.setProperties(options.docProps);
-
-  return { doc, el };
-};
-
-const genPdf = ({ doc, el }: IPDF): void => {
-  doc.html(el, options.output).then(() => {
-    const lastPage = doc.getNumberOfPages();
-    doc.deletePage(lastPage);
-    doc.output("dataurlnewwindow", options.output);
-  }).catch(() => {
-    console.log("Error creating the pdf");
-  });
-};
 
 const CV: FC = (): JSX.Element => {
   const handleSave = useCallback(() => {
-    const pdf = getPdf();
-    if (pdf !== null) {
-      genPdf(pdf);
-    }
+    generatePdf(options);
   }, []);
 
   return (
