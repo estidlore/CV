@@ -1,8 +1,15 @@
-import { basicInfo, contact, hobbies, languages, profile, skills } from "data";
 import type { FC } from "react";
 import React from "react";
 
 import { CV } from "views/CV";
+import {
+  basicInfo,
+  contact,
+  hobbies,
+  languages,
+  profile,
+  skills,
+} from "views/SidePanel/data";
 
 const App: FC = (): JSX.Element => (
   <div className={"bg-dark1 ff-arial flex jc-center"}>

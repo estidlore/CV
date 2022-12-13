@@ -10,7 +10,7 @@ import type {
   IContact,
   ILanguage,
   ISkill
-} from "views/CV/types";
+} from "views/SidePanel/types";
 
 interface ISidePanelProps {
   basicInfo: IBasicInfo;
@@ -54,12 +54,8 @@ const SidePanel: FC<ISidePanelProps> = ({
       <div className={"mr3"}>
         <p className={"mb1"}>{"Phone:"}</p>
         <p className={"mb1"}>{"Email:"}</p>
-        {linkedIn === undefined ? undefined : (
-          <p className={"mb1"}>{"LinkedIn:"}</p>
-        )}
-        {github === undefined ? undefined : (
-          <p className={"mb1"}>{"Github:"}</p>
-        )}
+        <p className={"mb1"}>{"LinkedIn:"}</p>
+        <p className={"mb1"}>{"Github:"}</p>
       </div>
       <div>
         <Link className={"mb1"} href={`tel:+${phone[0]}${phone[1]}`}>
@@ -68,16 +64,12 @@ const SidePanel: FC<ISidePanelProps> = ({
         <Link className={"mb1"} href={`mailto:${email}`}>
           {email}
         </Link>
-        {linkedIn === undefined ? undefined : (
-          <Link className={"mb1"} href={`https://${linkedIn}`}>
-            {`www.${linkedIn}`}
-          </Link>
-        )}
-        {github === undefined ? undefined : (
-          <Link className={"mb1"} href={`https://${github}`}>
-            {`www.${github}`}
-          </Link>
-        )}
+        <Link className={"mb1"} href={`https://${linkedIn}`}>
+          {`www.${linkedIn}`}
+        </Link>
+        <Link className={"mb1"} href={`https://${github}`}>
+          {`www.${github}`}
+        </Link>
       </div>
     </div>
     <p className={"ai-center f3 flex mb3 mt5 primary5"}>
@@ -127,5 +119,5 @@ const SidePanel: FC<ISidePanelProps> = ({
   </div>
 );
 
-export type { IBasicInfo, IContact, ILanguage, ISkill, ISidePanelProps };
+export type { ISidePanelProps };
 export { SidePanel };

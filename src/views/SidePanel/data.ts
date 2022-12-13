@@ -1,11 +1,12 @@
 import { imgs } from "assets/imgs";
+
 import type {
   IAbout,
   IBasicInfo,
   IContact,
   ILanguage,
   ISkill
-} from "views/CV/types";
+} from "./types";
 
 const basicInfo: IBasicInfo = {
   description: "Full-Stack Web Developer",
