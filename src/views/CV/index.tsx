@@ -2,73 +2,52 @@ import { jsPDF } from "jspdf";
 import type { FC } from "react";
 import React, { useCallback } from "react";
 
+import { getOptions } from "utils/pdf";
 import { MainPanel } from "views/MainPanel";
-
-import { SidePanel } from "../SidePanel";
-
-interface ICVProps {
-  height?: number;
-  width?: number;
-}
+import { SidePanel } from "views/SidePanel";
 
 interface IPDF {
-  cv: HTMLElement;
   doc: jsPDF;
-  height: number;
-  options: {
-    filename: string;
-  };
-  width: number;
+  el: HTMLElement;
 }
 
-const pdfOptions = {
-  html2canvas: {
-    scale: 1,
-  },
-};
+const options = getOptions("CV", 1120, 1500);
 
-const getPdf = (id: string, width: number, height: number): IPDF | null => {
-  const cv = document.getElementById(id);
-  if (cv === null) {
+const getPdf = (): IPDF | null => {
+  const el = document.getElementById(options.name);
+  if (el === null) {
     return null;
   }
-  const doc = new jsPDF("p", "px", [width, height]);
-  doc.setProperties({ title: id });
-  const options = {
-    filename: id + ".pdf",
-  };
+  const doc = new jsPDF("p", "px", [options.width, options.height]);
+  doc.setProperties(options.docProps);
 
-  return { cv, doc, height, options, width };
+  return { doc, el };
 };
 
-const genPdf = ({ cv, doc, options }: IPDF): void => {
-  doc.html(cv, pdfOptions).then(() => {
-    // Delete last blank page
-    doc.deletePage(doc.getNumberOfPages());
-    doc.output("dataurlnewwindow", options);
+const genPdf = ({ doc, el }: IPDF): void => {
+  doc.html(el, options.output).then(() => {
+    const lastPage = doc.getNumberOfPages();
+    doc.deletePage(lastPage);
+    doc.output("dataurlnewwindow", options.output);
   }).catch(() => {
     console.log("Error creating the pdf");
   });
 };
 
-const CV: FC<ICVProps> = ({
-  height = 1340, //1620,
-  width = 1120,
-}: Readonly<ICVProps>): JSX.Element => {
+const CV: FC = (): JSX.Element => {
   const handleSave = useCallback(() => {
-    const id = "CV";
-    const pdf = getPdf(id, width, height);
+    const pdf = getPdf();
     if (pdf !== null) {
       genPdf(pdf);
     }
-  }, [height, width]);
+  }, []);
 
   return (
     <div>
       <section
         className={"f2 flex light2 pos-rel"}
-        id={"CV"}
-        style={{ height: `${height}px`, width: `${width}px` }}
+        id={options.name}
+        style={options.style}
       >
         <SidePanel />
         <MainPanel />
@@ -88,5 +67,4 @@ const CV: FC<ICVProps> = ({
   );
 };
 
-export type { ICVProps };
 export { CV };
