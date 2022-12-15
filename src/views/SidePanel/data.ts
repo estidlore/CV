@@ -2,16 +2,22 @@ import { imgs } from "assets/imgs";
 
 import type {
   IAbout,
-  IBasicInfo,
   IContact,
   ILanguage,
   ISkill
 } from "./types";
 
-const basicInfo: IBasicInfo = {
+const about: IAbout = {
   description: "Full-Stack Web Developer",
   name: "Estid Felipe\nLozano Reyes",
   photo: imgs.photo,
+  phrase: "Today better than yesterday",
+  profile: "Software developer with three years of experience gained mainly " +
+  "through many personal projects, work experience and competitions. " + 
+  "Skilled in UI/UX development, algorithms and problem solving. " +
+  "Constantly working on growing and acquiring multidisciplinary skills. " +
+  "Known by a fast learning, creativity and " +
+  "pursuit excellence in all he is and all he does.",
 };
 
 const contact: IContact = {
@@ -45,16 +51,11 @@ const languages: ILanguage[] = [
   },
 ];
 
-const profile: IAbout = {
-  phrase: "Today better than yesterday",
-  profile: "Software developer with three years of experience. " +
-  "Skilled in UI/UX development, algorithms and problem solving. " +
-  "Constantly working on growing and acquiring multidisciplinary skills. " +
-  "Known by a fast learning, creativity and " +
-  "pursuit excellence in all he is and all he does.",
-};
-
 const skills: ISkill[] = [
+  {
+    level: 8,
+    name: "Bootstrap",
+  },
   {
     level: 6,
     name: "C#",
@@ -76,6 +77,14 @@ const skills: ISkill[] = [
     name: "Java",
   },
   {
+    level: 8,
+    name: "Javascript",
+  },
+  {
+    level: 8,
+    name: "Jest",
+  },
+  {
     level: 7,
     name: "Python",
   },
@@ -84,11 +93,13 @@ const skills: ISkill[] = [
     name: "React",
   },
   {
+    level: 6,
+    name: "SQL & NoSQL",
+  },
+  {
     level: 8,
     name: "Typescript",
   },
 ];
 
-skills.sort((a, b) => b.level - a.level);
-
-export { basicInfo, contact, hobbies, languages, profile, skills };
+export { about, contact, hobbies, languages, skills };

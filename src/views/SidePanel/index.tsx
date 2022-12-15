@@ -5,33 +5,26 @@ import { Image } from "components/Image";
 import { Link } from "components/Link";
 import { ProgressBar } from "components/ProgressBar";
 
-import {
-  basicInfo,
-  contact,
-  hobbies,
-  languages,
-  profile,
-  skills,
-} from "./data";
+import { about, contact, hobbies, languages, skills } from "./data";
 
 const SidePanel: FC = (): JSX.Element => (
   <div className={"SidePanel bg-dark3 p6"}>
     <div className={"flex jc-center mb4"}>
-      <img className={"rnd-50 wp50"} src={basicInfo.photo} />
+      <img className={"rnd-50 wp50"} src={about.photo} />
     </div>
     <p className={"f4 mb2 primary5 ta-center"}>
-      {basicInfo.name}
+      {about.name}
     </p>
     <p className={"f2 ta-center"}>
-      {basicInfo.description}
+      {about.description}
     </p>
     <hr className={"my4"} />
     <p className={"ai-center f3 flex mb3 mt5 primary5"}>
       <Image className={"mr3"} name={"user"} />
       {"Profile"}
     </p>
-    <p className={"mb2"}>{profile.profile}</p>
-    <p className={"fs-i"}>{profile.phrase}</p>
+    <p className={"mb2"}>{about.profile}</p>
+    <p className={"fs-i"}>{about.phrase}</p>
     <p className={"ai-center f3 flex mb3 mt5 primary5"}>
       <Image className={"mr3"} name={"addressBook"} />
       {"Contact"}
