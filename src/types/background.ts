@@ -1,7 +1,14 @@
 import type { IDate, IDateRange } from "types/time";
 
+interface IAcknowledgement {
+  date: IDate;
+  issuer: string;
+  name: string;
+}
+
 interface ICertification {
   date: IDate;
+  hide?: boolean;
   issuer: string;
   name: string;
 }
@@ -27,4 +34,10 @@ interface IExperience {
   role: string;
 }
 
-export type { ICertification, IEducation, IEvent, IExperience };
+export type {
+  IAcknowledgement,
+  ICertification,
+  IEducation,
+  IEvent,
+  IExperience,
+};

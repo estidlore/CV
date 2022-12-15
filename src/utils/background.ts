@@ -1,9 +1,16 @@
 import type {
+  IAcknowledgement,
   ICertification,
   IEducation,
   IEvent,
   IExperience,
 } from "types/background";
+
+const formatAcknowledgement = (el: IAcknowledgement): IEvent => ({
+  date: el.date,
+  description: el.issuer,
+  subtitle: el.name,
+});
 
 const formatCertification = (el: ICertification): IEvent => ({
   date: el.date,
@@ -25,4 +32,9 @@ const formatExperience = (el: IExperience): IEvent => ({
   title: el.role,
 });
 
-export { formatCertification, formatEducation, formatExperience };
+export {
+  formatAcknowledgement,
+  formatCertification,
+  formatEducation,
+  formatExperience,
+};
