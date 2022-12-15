@@ -1,16 +1,20 @@
 import type { FC } from "react";
-import React, { Fragment } from "react";
+import React from "react";
 
 import { Image } from "components/Image";
 import { Link } from "components/Link";
-import { ProgressBar } from "components/ProgressBar";
 
 import { about, contact, hobbies, languages, skills } from "./data";
 
+const headerClass = "ai-center f3 flex mb3 mt5 primary5 wp70";
+const contactClass = "f2 fw7 mb1 mt3";
+
 const SidePanel: FC = (): JSX.Element => (
-  <div className={"SidePanel bg-dark3 p6"}>
+  <div className={"bg-dark3 p6 wp30"}>
     <div className={"flex jc-center mb4"}>
-      <img className={"rnd-50 wp50"} src={about.photo} />
+      <div className={"rnd-50 p2 bdr3 bdr-primary5 wp50"}>
+        <img className={"rnd-50 wp100"} src={about.photo} />
+      </div>
     </div>
     <p className={"f4 mb2 primary5 ta-center"}>
       {about.name}
@@ -19,42 +23,35 @@ const SidePanel: FC = (): JSX.Element => (
       {about.description}
     </p>
     <hr className={"my4"} />
-    <p className={"ai-center f3 flex mb3 mt5 primary5"}>
+    <p className={headerClass}>
       <Image className={"mr3"} name={"user"} />
       {"Profile"}
     </p>
     <p className={"mb2"}>{about.profile}</p>
     <p className={"fs-i"}>{about.phrase}</p>
-    <p className={"ai-center f3 flex mb3 mt5 primary5"}>
+    <p className={headerClass}>
       <Image className={"mr3"} name={"addressBook"} />
       {"Contact"}
     </p>
-    <div className={"flex"}>
-      <div className={"mr3"}>
-        <p className={"mb1"}>{"Phone:"}</p>
-        <p className={"mb1"}>{"Email:"}</p>
-        <p className={"mb1"}>{"LinkedIn:"}</p>
-        <p className={"mb1"}>{"Github:"}</p>
-      </div>
-      <div>
-        <Link
-          className={"mb1"}
-          href={`tel:+${contact.phone[0]}${contact.phone[1]}`}
-        >
-          {`(+${contact.phone[0]}) ${contact.phone[1]}`}
-        </Link>
-        <Link className={"mb1"} href={`mailto:${contact.email}`}>
-          {contact.email}
-        </Link>
-        <Link className={"mb1"} href={`https://${contact.linkedIn}`}>
-          {`www.${contact.linkedIn}`}
-        </Link>
-        <Link className={"mb1"} href={`https://${contact.github}`}>
-          {`www.${contact.github}`}
-        </Link>
-      </div>
+    <div>
+      <p className={contactClass}>{"Phone"}</p>
+      <Link href={`tel:+${contact.phone[0]}${contact.phone[1]}`}>
+        {`(+${contact.phone[0]}) ${contact.phone[1]}`}
+      </Link>
+      <p className={contactClass}>{"Email"}</p>
+      <Link href={`mailto:${contact.email}`}>
+        {contact.email}
+      </Link>
+      <p className={contactClass}>{"LinkedIn"}</p>
+      <Link href={`https://${contact.linkedIn}`}>
+        {`www.${contact.linkedIn}`}
+      </Link>
+      <p className={contactClass}>{"GitHub"}</p>
+      <Link href={`https://${contact.github}`}>
+        {`www.${contact.github}`}
+      </Link>
     </div>
-    <p className={"ai-center f3 flex mb3 mt5 primary5"}>
+    <p className={headerClass}>
       <Image className={"mr3"} name={"language"} />
       {"Languages"}
     </p>
@@ -70,30 +67,24 @@ const SidePanel: FC = (): JSX.Element => (
         ))}
       </div>
     </div>
-    <p className={"ai-center f3 flex mb3 mt5 primary5"}>
+    <p className={headerClass}>
       <Image className={"mr3"} name={"code"} />
       {"Dev Skills"}
     </p>
     <div className={"flex flex-wrap"}>
-      {skills.map(({ level, name }): JSX.Element => (
-        <Fragment key={name}>
-          <p className={"mb1 wp40"}>
-            {`${name}:`}
-          </p>
-          <div className={"mb1 wp60"}>
-            <ProgressBar max={10} value={level} />
-          </div>
-        </Fragment>
+      {skills.map((skill): JSX.Element => (
+        <p className={"wp50 mb1"} key={skill.name}>
+          {skill.name}
+        </p>
       ))}
     </div>
-    <p className={"ai-center f3 flex mb3 mt5 primary5"}>
+    <p className={headerClass}>
       <Image className={"mr3"} name={"chessPawn"} />
       {"Hobbies"}
     </p>
     <div className={"flex flex-wrap"}>
       {hobbies.map((hobby): JSX.Element => (
         <p className={"wp50 mb1"} key={hobby}>
-          <Image className={"f1 mr3"} name={"star"} />
           {hobby}
         </p>
       ))}
