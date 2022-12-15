@@ -5,7 +5,7 @@ import { generatePdf, getOptions } from "utils/pdf";
 import { MainPanel } from "views/MainPanel";
 import { SidePanel } from "views/SidePanel";
 
-const options = getOptions("CV", 1120, 1500);
+const options = getOptions("CV", 1080);
 
 const App: FC = (): JSX.Element => {
   const handleSave = useCallback(() => {
@@ -26,7 +26,7 @@ const App: FC = (): JSX.Element => {
         </p>
       </section>
       <button
-        className={"bg-primary5 light2 mt3 px3 py2 rnd"}
+        className={"bdr-no bg-primary5 light2 mt3 px3 py2 rnd"}
         onClick={handleSave}
       >
         {"Save"}

@@ -8,7 +8,7 @@ const generatePdf = (options: IPDFOptions): void => {
   if (el === null) {
     return;
   }
-  const doc = new jsPDF("p", "px", [options.width, options.height]);
+  const doc = new jsPDF("p", "px", [el.offsetWidth, el.offsetHeight]);
   doc.setProperties(options.docProps);
   // Generate doc
   doc.html(el, options.output).then(() => {
@@ -20,25 +20,18 @@ const generatePdf = (options: IPDFOptions): void => {
   });
 };
 
-const getOptions = (
-  name: string,
-  width: number,
-  height: number,
-): IPDFOptions => ({
+const getOptions = (name: string, width: number): IPDFOptions => ({
   docProps: {
     author: "estidlore",
     title: name,
   },
-  height,
   name,
   output: {
     filename: `${name}.pdf`,
   },
   style: {
-    height: `${height}px`,
     width: `${width}px`,
   },
-  width,
 });
 
 export { generatePdf, getOptions };

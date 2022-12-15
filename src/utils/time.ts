@@ -4,7 +4,7 @@ const formatDate = (el: IDate): string => `${el.year} ${el.month}`;
 
 const formatDateRange = (el: IDateRange): string => `${
   formatDate(el.from)
-} -\n ${
+} to\n ${
   el.to === "Now" ? "Present" : formatDate(el.to)
 }`;
 
