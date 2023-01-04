@@ -1,19 +1,22 @@
 import type { IDate, IDateRange } from "types/time";
 
-interface IAcknowledgement {
-  date: IDate;
-  issuer: string;
-  name: string;
-}
-
-interface ICertification {
-  date: IDate;
+interface IBackground {
   hide?: boolean;
+}
+
+interface IAcknowledgement extends IBackground {
+  date: IDate;
   issuer: string;
   name: string;
 }
 
-interface IEducation {
+interface ICertification extends IBackground {
+  date: IDate;
+  issuer: string;
+  name: string;
+}
+
+interface IEducation extends IBackground {
   date: IDateRange;
   details: string;
   institution: string;
@@ -27,7 +30,7 @@ interface IEvent {
   title?: string;
 }
 
-interface IExperience {
+interface IExperience extends IBackground {
   company: string;
   date: IDateRange;
   details: string;
@@ -36,6 +39,7 @@ interface IExperience {
 
 export type {
   IAcknowledgement,
+  IBackground,
   ICertification,
   IEducation,
   IEvent,

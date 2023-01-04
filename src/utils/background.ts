@@ -1,10 +1,13 @@
 import type {
   IAcknowledgement,
+  IBackground,
   ICertification,
   IEducation,
   IEvent,
   IExperience,
 } from "types/background";
+
+const filterData = (el: IBackground): boolean => !el.hide;
 
 const formatAcknowledgement = (el: IAcknowledgement): IEvent => ({
   date: el.date,
@@ -33,6 +36,7 @@ const formatExperience = (el: IExperience): IEvent => ({
 });
 
 export {
+  filterData,
   formatAcknowledgement,
   formatCertification,
   formatEducation,
