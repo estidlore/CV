@@ -10,7 +10,7 @@ import star from "./star.png";
 import user from "./user.png";
 
 const faImgs = {
-  addressBook,  
+  addressBook,
   award,
   briefcase,
   chessPawn,

@@ -1,15 +1,16 @@
-type TMonth = "Jan"
-| "Feb"
-| "Mar"
-| "Apr"
-| "May"
-| "Jun"
-| "Jul"
-| "Aug"
-| "Sep"
-| "Oct"
-| "Nov"
-| "Dec";
+type TMonth =
+  | "Apr"
+  | "Aug"
+  | "Dec"
+  | "Feb"
+  | "Jan"
+  | "Jul"
+  | "Jun"
+  | "Mar"
+  | "May"
+  | "Nov"
+  | "Oct"
+  | "Sep";
 
 interface IDate {
   month: TMonth;

@@ -1,4 +1,4 @@
-import jsPDF from "jspdf";
+import { jsPDF } from "jspdf";
 
 import type { IPDFOptions } from "types/pdf";
 
@@ -11,13 +11,16 @@ const generatePdf = (options: IPDFOptions): void => {
   const doc = new jsPDF("p", "px", [el.offsetWidth, el.offsetHeight]);
   doc.setProperties(options.docProps);
   // Generate doc
-  doc.html(el, options.output).then(() => {
-    const lastPage = doc.getNumberOfPages();
-    doc.deletePage(lastPage);
-    doc.output("dataurlnewwindow", options.output);
-  }).catch(() => {
-    console.log("Error generating the pdf");
-  });
+  doc
+    .html(el, options.output)
+    .then(() => {
+      const lastPage = doc.getNumberOfPages();
+      doc.deletePage(lastPage);
+      doc.output("dataurlnewwindow", options.output);
+    })
+    .catch(() => {
+      console.log("Error generating the pdf");
+    });
 };
 
 const getOptions = (name: string, width: number): IPDFOptions => ({

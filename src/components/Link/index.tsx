@@ -8,7 +8,7 @@ import type { ILinkProps } from "./types";
 const Link: FC<ILinkProps> = ({
   children,
   className = "",
-  href
+  href,
 }: ILinkProps): JSX.Element => (
   <a
     className={`ai-center d-f ${className}`}

@@ -40,7 +40,7 @@
     "build": "NODE_ENV=production webpack",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src",
     "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx src --fix",
-    "pretty": "prettier --config .prettierrc 'src/**/*.{ts,tsx}' --write",
+    "format": "prettier --write src",
     "start": "webpack serve --port 3000"
   },
   "version": "1.0.0"

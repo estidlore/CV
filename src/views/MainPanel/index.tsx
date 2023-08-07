@@ -33,14 +33,14 @@ const MainPanel: FC = (): JSX.Element => (
     </p>
     <TimeLine events={education.filter(filterData).map(formatEducation)} />
     <p className={"f4 my5 primary5"}>{"Certifications"}</p>
-    <TimeLine 
+    <TimeLine
       events={certifications.filter(filterData).map(formatCertification)}
     />
     <p className={headerClass}>
       <Image className={"mr3"} name={"award"} />
       {"Acknowledgements"}
     </p>
-    <TimeLine 
+    <TimeLine
       events={acknowledgements.filter(filterData).map(formatAcknowledgement)}
     />
   </div>

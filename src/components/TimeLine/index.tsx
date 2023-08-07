@@ -25,7 +25,7 @@ const TimeLine: FC<ITimeLineProps> = ({
             <p>{description}</p>
           </div>
         </div>
-      )
+      ),
     )}
   </div>
 );

@@ -31,7 +31,7 @@ const acknowledgements: IAcknowledgement[] = [
       year: 2020,
     },
     issuer: "Universidad de La Sabana",
-    name: "Mentor in Sabana Hack Junior"
+    name: "Mentor in Sabana Hack Junior",
   },
   {
     date: {
@@ -39,8 +39,8 @@ const acknowledgements: IAcknowledgement[] = [
       year: 2017,
     },
     issuer: "Colombia's Government",
-    name: "Scholarship Ser Pilo Paga 4"
-  }
+    name: "Scholarship Ser Pilo Paga 4",
+  },
 ];
 
 export { acknowledgements };

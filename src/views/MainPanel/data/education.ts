@@ -9,9 +9,10 @@ const education: IEducation[] = [
       },
       to: "Now",
     },
-    details: "Member of several groups of interest: " +
-    "Robotics, Web Development, Videogames, Human Centered Design, " +
-    "Automated Software Configuration, Growth (Psychology).",
+    details:
+      "Member of several groups of interest: " +
+      "Robotics, Web Development, Videogames, Human Centered Design, " +
+      "Automated Software Configuration, Growth (Psychology).",
     institution: "Universidad de La Sabana",
     title: "Informatics Engineering",
   },

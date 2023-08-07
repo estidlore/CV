@@ -8,14 +8,9 @@ const ProgressBar: FC<IProgressBarProps> = ({
   value,
 }: IProgressBarProps): JSX.Element => (
   <div className={"flex rnd jc-between"}>
-    <p className={"bg-primary4 mr1 px2 rnd-l"}>
-      {value}
-    </p>
+    <p className={"bg-primary4 mr1 px2 rnd-l"}>{value}</p>
     <div className={"bg-light1 grow rnd-r"}>
-      <p
-        className={"bg-primary5"}
-        style={{ width: `${(100 * value / max)}%` }}
-      >
+      <p className={"bg-primary5"} style={{ width: `${(100 * value) / max}%` }}>
         &nbsp;
       </p>
     </div>

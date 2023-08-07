@@ -16,12 +16,8 @@ const SidePanel: FC = (): JSX.Element => (
         <img className={"rnd-50 wp100"} src={about.photo} />
       </div>
     </div>
-    <p className={"f4 mb2 primary5 ta-center"}>
-      {about.name}
-    </p>
-    <p className={"f2 ta-center"}>
-      {about.description}
-    </p>
+    <p className={"f4 mb2 primary5 ta-center"}>{about.name}</p>
+    <p className={"f2 ta-center"}>{about.description}</p>
     <hr className={"my4"} />
     <p className={headerClass}>
       <Image className={"mr3"} name={"user"} />
@@ -39,17 +35,13 @@ const SidePanel: FC = (): JSX.Element => (
         {`(+${contact.phone[0]}) ${contact.phone[1]}`}
       </Link>
       <p className={contactClass}>{"Email"}</p>
-      <Link href={`mailto:${contact.email}`}>
-        {contact.email}
-      </Link>
+      <Link href={`mailto:${contact.email}`}>{contact.email}</Link>
       <p className={contactClass}>{"LinkedIn"}</p>
       <Link href={`https://${contact.linkedIn}`}>
         {`www.${contact.linkedIn}`}
       </Link>
       <p className={contactClass}>{"GitHub"}</p>
-      <Link href={`https://${contact.github}`}>
-        {`www.${contact.github}`}
-      </Link>
+      <Link href={`https://${contact.github}`}>{`www.${contact.github}`}</Link>
     </div>
     <p className={headerClass}>
       <Image className={"mr3"} name={"language"} />
@@ -57,14 +49,20 @@ const SidePanel: FC = (): JSX.Element => (
     </p>
     <div className={"flex"}>
       <div className={"mr3"}>
-        {languages.map(({ name }): JSX.Element => (
-          <p className={"mb1"} key={name}>{`${name}:`}</p>
-        ))}
+        {languages.map(
+          ({ name }): JSX.Element => (
+            <p className={"mb1"} key={name}>{`${name}:`}</p>
+          ),
+        )}
       </div>
       <div>
-        {languages.map(({ level, name }): JSX.Element => (
-          <p className={"mb1"} key={name}>{level}</p>
-        ))}
+        {languages.map(
+          ({ level, name }): JSX.Element => (
+            <p className={"mb1"} key={name}>
+              {level}
+            </p>
+          ),
+        )}
       </div>
     </div>
     <p className={headerClass}>
@@ -72,22 +70,26 @@ const SidePanel: FC = (): JSX.Element => (
       {"Dev Skills"}
     </p>
     <div className={"flex flex-wrap"}>
-      {skills.map((skill): JSX.Element => (
-        <p className={"wp50 mb1"} key={skill.name}>
-          {skill.name}
-        </p>
-      ))}
+      {skills.map(
+        (skill): JSX.Element => (
+          <p className={"wp50 mb1"} key={skill.name}>
+            {skill.name}
+          </p>
+        ),
+      )}
     </div>
     <p className={headerClass}>
       <Image className={"mr3"} name={"chessPawn"} />
       {"Hobbies"}
     </p>
     <div className={"flex flex-wrap"}>
-      {hobbies.map((hobby): JSX.Element => (
-        <p className={"wp50 mb1"} key={hobby}>
-          {hobby}
-        </p>
-      ))}
+      {hobbies.map(
+        (hobby): JSX.Element => (
+          <p className={"wp50 mb1"} key={hobby}>
+            {hobby}
+          </p>
+        ),
+      )}
     </div>
   </div>
 );
