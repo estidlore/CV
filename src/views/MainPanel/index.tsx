@@ -18,7 +18,7 @@ import {
   experience,
 } from "./data";
 
-const headerClass = "ai-center bg-primary4 d-f f4 px5 py3 rnd";
+const headerClass = "ai-center bg-primary4 d-f f3 px4 py2 rnd";
 
 const MainPanel: FC = (): JSX.Element => (
   <div className={"bg-dark2 p6 wp70"}>
@@ -32,7 +32,7 @@ const MainPanel: FC = (): JSX.Element => (
       {"Education"}
     </p>
     <TimeLine events={education.filter(filterData).map(formatEducation)} />
-    <p className={"f4 my5 primary5"}>{"Certifications"}</p>
+    <p className={"f3 primary5"}>{"Certifications"}</p>
     <TimeLine
       events={certifications.filter(filterData).map(formatCertification)}
     />

@@ -6,14 +6,14 @@ import { Link } from "components/Link";
 
 import { about, contact, hobbies, languages, skills } from "./data";
 
-const headerClass = "ai-center f3 flex mb3 mt5 primary5 wp70";
-const contactClass = "f2 fw7 mb1 mt3";
+const headerClass = "ai-center f3 flex mb1 mt3 primary5";
+const contactClass = "f2 fw7 mb0 mt2";
 
 const SidePanel: FC = (): JSX.Element => (
   <div className={"bg-dark3 p6 wp30"}>
     <div className={"flex jc-center mb4"}>
-      <div className={"rnd-50 p2 bdr3 bdr-primary5 wp50"}>
-        <img className={"rnd-50 wp100"} src={about.photo} />
+      <div className={"rnd-50 p2 bdr3 bdr-primary5 wp60"}>
+        <img className={"rnd-50 wp100 hp100"} src={about.photo} />
       </div>
     </div>
     <p className={"f4 mb2 primary5 ta-center"}>{about.name}</p>

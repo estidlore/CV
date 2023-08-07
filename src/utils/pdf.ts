@@ -23,7 +23,7 @@ const generatePdf = (options: IPDFOptions): void => {
     });
 };
 
-const getOptions = (name: string, width: number): IPDFOptions => ({
+const getOptions = (name: string): IPDFOptions => ({
   docProps: {
     author: "estidlore",
     title: name,
@@ -33,7 +33,7 @@ const getOptions = (name: string, width: number): IPDFOptions => ({
     filename: `${name}.pdf`,
   },
   style: {
-    width: `${width}px`,
+    width: "8.5in",
   },
 });
 

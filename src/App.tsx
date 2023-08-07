@@ -5,7 +5,7 @@ import { generatePdf, getOptions } from "utils/pdf";
 import { MainPanel } from "views/MainPanel";
 import { SidePanel } from "views/SidePanel";
 
-const options = getOptions("CV", 1080);
+const options = getOptions("CV");
 
 const App: FC = (): JSX.Element => {
   const handleSave = useCallback(() => {
@@ -15,7 +15,7 @@ const App: FC = (): JSX.Element => {
   return (
     <div className={"ai-center bg-dark1 ff-arial d-f flex-col"}>
       <section
-        className={"f2 d-f light2 pos-rel"}
+        className={"f1 d-f light2 pos-rel"}
         id={options.name}
         style={options.style}
       >
