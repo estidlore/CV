@@ -28,6 +28,15 @@ const acknowledgements: IAcknowledgement[] = [
   {
     date: {
       month: "Nov",
+      year: 2021,
+    },
+    hide: true,
+    issuer: "Universidad de La Sabana",
+    name: "Finalist in Sabana Hack Super App",
+  },
+  {
+    date: {
+      month: "Nov",
       year: 2020,
     },
     issuer: "Universidad de La Sabana",
