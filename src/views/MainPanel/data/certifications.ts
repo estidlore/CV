@@ -43,7 +43,7 @@ const certifications: ICertification[] = [
       year: 2023,
     },
     hide: false,
-    issuer: "IMB (Coursera)",
+    issuer: "IBM (Coursera)",
     name: "Introduction to Agile Development and Scrum",
   },
   {

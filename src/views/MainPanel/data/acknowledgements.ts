@@ -39,6 +39,7 @@ const acknowledgements: IAcknowledgement[] = [
       month: "Nov",
       year: 2020,
     },
+    hide: true,
     issuer: "Universidad de La Sabana",
     name: "Mentor in Sabana Hack Junior",
   },

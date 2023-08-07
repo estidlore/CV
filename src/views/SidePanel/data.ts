@@ -3,17 +3,15 @@ import { imgs } from "assets/imgs";
 import type { IAbout, IContact, ILanguage, ISkill } from "./types";
 
 const about: IAbout = {
-  description: "Full-Stack Web Developer",
+  description: "Web & Mobile Developer",
   name: "Estid Felipe\nLozano Reyes",
   photo: imgs.photo,
   phrase: "Today better than yesterday",
   profile:
-    "Software developer with three years of experience gained mainly " +
-    "through many personal projects, work experience and competitions. " +
-    "Skilled in UI/UX development, algorithms and problem solving. " +
-    "Constantly working on growing and acquiring multidisciplinary skills. " +
-    "Known by a fast learning, creativity and " +
-    "pursuit excellence in all he is and all he does.",
+    "Full-stack software developer specialized in front-end " +
+    "with 3+ years of hands-on experience. " +
+    "Skilled in UI/UX, " +
+    "algorithms (optimization, data structures, etc.) and problem solving.",
 };
 
 const contact: IContact = {
@@ -38,7 +36,7 @@ const languages: ILanguage[] = [
     name: "Spanish",
   },
   {
-    level: "B2",
+    level: "C1",
     name: "English",
   },
   {
