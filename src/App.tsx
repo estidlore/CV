@@ -1,4 +1,3 @@
-import type { FC } from "react";
 import React, { useCallback } from "react";
 
 import { generatePdf, getOptions } from "utils/pdf";
@@ -7,7 +6,7 @@ import { SidePanel } from "views/SidePanel";
 
 const options = getOptions("CV");
 
-const App: FC = (): JSX.Element => {
+const App = (): JSX.Element => {
   const handleSave = useCallback(() => {
     generatePdf(options);
   }, []);

@@ -1,4 +1,3 @@
-import type { FC } from "react";
 import React from "react";
 
 import { Image } from "components/Image";
@@ -20,7 +19,7 @@ import {
 
 const headerClass = "ai-center bg-primary4 d-f f3 px4 py2 rnd";
 
-const MainPanel: FC = (): JSX.Element => (
+const MainPanel = (): JSX.Element => (
   <div className={"bg-dark2 p6 wp70"}>
     <p className={headerClass}>
       <Image className={"mr3"} name={"briefcase"} />

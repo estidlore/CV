@@ -1,15 +1,10 @@
-import type { FC } from "react";
 import React from "react";
 
 import { Image } from "components/Image";
 
 import type { ILinkProps } from "./types";
 
-const Link: FC<ILinkProps> = ({
-  children,
-  className = "",
-  href,
-}: ILinkProps): JSX.Element => (
+const Link = ({ children, className = "", href }: ILinkProps): JSX.Element => (
   <a
     className={`ai-center d-f ${className}`}
     href={href}

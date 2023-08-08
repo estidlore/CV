@@ -1,13 +1,10 @@
-import type { FC } from "react";
 import React from "react";
 
 import { formatDate, formatDateRange } from "utils/time";
 
 import type { ITimeLineProps } from "./types";
 
-const TimeLine: FC<ITimeLineProps> = ({
-  events,
-}: ITimeLineProps): JSX.Element => (
+const TimeLine = ({ events }: ITimeLineProps): JSX.Element => (
   <div className={"my4"}>
     {events.map(
       ({ date, description, subtitle, title }): JSX.Element => (

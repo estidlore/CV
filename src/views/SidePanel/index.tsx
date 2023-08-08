@@ -1,4 +1,3 @@
-import type { FC } from "react";
 import React from "react";
 
 import { Image } from "components/Image";
@@ -6,11 +5,11 @@ import { Link } from "components/Link";
 
 import { about, contact, hobbies, languages, skills } from "./data";
 
-const headerClass = "ai-center f3 flex mb1 mt3 primary5";
+const headerClass = "ai-center f3 flex mb2 mt4 primary5";
 const contactClass = "f2 fw7 mb0 mt2";
 
-const SidePanel: FC = (): JSX.Element => (
-  <div className={"bg-dark3 p6 wp30"}>
+const SidePanel = (): JSX.Element => (
+  <div className={"jc-center bg-dark3 flex flex-col p6 wp30"}>
     <div className={"flex jc-center mb4"}>
       <div className={"rnd-50 p2 bdr3 bdr-primary5 wp60"}>
         <img className={"rnd-50 wp100 hp100"} src={about.photo} />
@@ -70,13 +69,16 @@ const SidePanel: FC = (): JSX.Element => (
       {"Dev Skills"}
     </p>
     <div className={"flex flex-wrap"}>
-      {skills.map(
-        (skill): JSX.Element => (
-          <p className={"wp50 mb1"} key={skill.name}>
-            {skill.name}
-          </p>
-        ),
-      )}
+      {skills
+        .filter((el) => el.level >= 7)
+        .sort((a, b) => b.level - a.level)
+        .map(
+          (skill): JSX.Element => (
+            <p className={"wp50 mb1"} key={skill.name}>
+              {skill.name}
+            </p>
+          ),
+        )}
     </div>
     <p className={headerClass}>
       <Image className={"mr3"} name={"chessPawn"} />

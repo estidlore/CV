@@ -55,7 +55,7 @@ const skills: ISkill[] = [
     name: "C#",
   },
   {
-    level: 9,
+    level: 8,
     name: "CSS & SCSS",
   },
   {
@@ -63,11 +63,7 @@ const skills: ISkill[] = [
     name: "Flutter",
   },
   {
-    level: 8,
-    name: "HTML",
-  },
-  {
-    level: 8,
+    level: 7,
     name: "Java",
   },
   {
@@ -75,7 +71,7 @@ const skills: ISkill[] = [
     name: "Javascript",
   },
   {
-    level: 8,
+    level: 9,
     name: "Jest",
   },
   {
@@ -83,7 +79,7 @@ const skills: ISkill[] = [
     name: "Python",
   },
   {
-    level: 8,
+    level: 9,
     name: "React",
   },
   {
@@ -91,7 +87,7 @@ const skills: ISkill[] = [
     name: "SQL & NoSQL",
   },
   {
-    level: 8,
+    level: 9,
     name: "Typescript",
   },
 ];

@@ -14,7 +14,8 @@ const experience: IExperience[] = [
       },
     },
     details:
-      "- Collaborate with designers to create simple and intuitive UI/UX" +
+      "- Manage end-to-end development cycle from concept to deployment" +
+      "\n- Collaborate with designers to create simple and intuitive UI/UX" +
       "\n- Implement tests, CI/CD workflows, and behavior-driven issues" +
       "\n- Support less experienced team members contributing to their growth" +
       "\nReact Native, Typescript, TDD, BDD, Firebase, CI/CD, Express",
